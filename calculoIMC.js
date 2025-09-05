@@ -1,24 +1,12 @@
-function calcularIMC(peso, altura) {
-  const imc = peso / (altura * altura);
+let nome = "jose vanderson";
+let idade = 21;
+let peso = 54.0;
+let altura = 164; // em cm
+let imc = peso / (altura * altura);
 
-  let classificacao = "";
+console.log(nome);
+console.log("sua idade é " + idade);
+console.log("seu peso é " + peso + " kg");
+console.log("sua altura é " + altura + " cm");
+console.log("seu imc é " + imc);
 
-  if (imc < 18.5) {
-    classificacao = "Abaixo do peso";
-  } else if (imc < 24.9) {
-    classificacao = "Peso normal";
-  } else if (imc < 29.9) {
-    classificacao = "Sobrepeso";
-  } else if (imc < 34.9) {
-    classificacao = "Obesidade grau I";
-  } else if (imc < 39.9) {
-    classificacao = "Obesidade grau II";
-  } else {
-    classificacao = "Obesidade grau III";
-  }
-
-  return `IMC: ${imc.toFixed(2)} - ${classificacao}`;
-}
-
-// Exemplo de uso:
-console.log(calcularIMC(70, 1.75)); // IMC: 22.86 - Peso normal
